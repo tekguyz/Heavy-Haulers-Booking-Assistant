@@ -1,0 +1,43 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-orange: oklch(67.3% 0.236 42.1);
+  --color-brand-dark: oklch(14.5% 0.015 250);
+  --color-brand-steel: oklch(32% 0.02 240);
+  --color-brand-muted: oklch(75% 0.015 240);
+  --color-brand-light: oklch(98% 0.005 0);
+  --background-image-hazard: repeating-linear-gradient(45deg, var(--color-brand-orange), var(--color-brand-orange) 10px, var(--color-brand-dark) 10px, var(--color-brand-dark) 20px);
+}
+
+@layer base {
+  :root {
+    --background: var(--color-brand-dark);
+    --foreground: var(--color-brand-light);
+  }
+
+  html, body {
+    overflow-x: hidden;
+  }
+
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+@utility btn-shadow {
+  box-shadow: 4px 4px 0px var(--color-brand-steel);
+}
+
+@utility bento-card {
+  background-color: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--color-brand-steel);
+  transition: all 0.2s ease;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
