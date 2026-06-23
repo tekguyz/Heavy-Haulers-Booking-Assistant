@@ -11,10 +11,10 @@ export function About() {
           
           {/* Image Side */}
           <div className="w-full lg:w-1/2 relative">
-            <div className="relative aspect-square w-full max-w-md lg:max-w-lg mx-auto overflow-hidden border-2 border-brand-steel btn-shadow">
+            <div className="relative aspect-[3/4] w-full max-w-md lg:max-w-lg mx-auto overflow-hidden border-2 border-brand-steel btn-shadow">
               <Image 
-                src="/about-flyer.jpg" 
-                alt="Heavy Haulers Official Flyer" 
+                src="/about-movers.jpg" 
+                alt="Heavy Haulers Professional Movers" 
                 fill 
                 className="object-cover transition-all duration-700"
                 referrerPolicy="no-referrer"
