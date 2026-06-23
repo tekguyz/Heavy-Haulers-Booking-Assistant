@@ -7,7 +7,7 @@ import { BrandIcon } from '@/components/ui/brand-icon';
 
 export function Hero() {
   return (
-    <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-brand-dark pt-20 pb-16" id="home">
+    <section className="relative min-h-[80vh] sm:min-h-[85vh] lg:min-h-[90vh] flex items-center justify-center overflow-hidden bg-brand-dark pt-24 pb-10 sm:pt-28 sm:pb-16" id="home">
       {/* Background abstract elements */}
       <div className="absolute top-0 left-0 w-full h-2 bg-[image:var(--background-image-hazard)] z-20"></div>
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
@@ -21,30 +21,26 @@ export function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="max-w-4xl"
+          className="max-w-4xl animate-fade-in"
         >
-          <div className="inline-flex items-center gap-3 mb-8">
-            <BrandIcon className="w-12 h-12 text-brand-orange" />
-            <div className="flex flex-col text-left border-l border-brand-steel pl-3">
-              <span className="text-xs font-black tracking-widest text-brand-orange uppercase">
-                Las Cruces, NM
-              </span>
-              <span className="text-[10px] font-bold tracking-widest text-brand-light uppercase">
-                Premier Movers
-              </span>
-            </div>
+          {/* Elegant location indicator pill (clean and non-redundant) */}
+          <div className="inline-flex items-center gap-1.5 mb-5 sm:mb-8 px-2.5 sm:px-3.5 py-1 sm:py-1.5 border border-brand-steel/60 bg-brand-dark/50 rounded-full max-w-full">
+            <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 shrink-0 rounded-full bg-brand-orange animate-pulse" />
+            <span className="text-[10px] sm:text-xs font-black uppercase tracking-widest text-brand-light whitespace-nowrap">
+              Las Cruces, NM & Surrounding Areas
+            </span>
           </div>
           
-          <h1 className="text-6xl md:text-8xl font-black uppercase leading-[0.9] tracking-tighter mb-6 text-balance text-brand-light">
+          <h1 className="text-4xl min-[360px]:text-5xl sm:text-6xl md:text-8xl font-black uppercase leading-[0.95] md:leading-[0.9] tracking-tighter mb-4 sm:mb-6 text-balance text-brand-light">
             MOVING IS <span className="text-brand-orange">HEAVY</span>.<br />
             WE MAKE IT EASY.
           </h1>
           
-          <p className="text-xl md:text-2xl font-bold text-brand-light/80 mb-10 max-w-2xl mx-auto text-balance">
+          <p className="text-lg sm:text-xl md:text-2xl font-bold text-brand-light/85 mb-6 sm:mb-8 max-w-xl md:max-w-3xl mx-auto text-balance">
             Don&apos;t break your back—call Heavy Haulers. Fast, reliable, and affordable moving services in Las Cruces.
           </p>
 
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
             <motion.div
               whileHover="hover"
               whileTap={{ scale: 0.95 }}
@@ -52,7 +48,7 @@ export function Hero() {
             >
               <Link
                 href="#estimate-form"
-                className="group relative inline-flex items-center justify-center gap-3 px-8 py-4 text-lg font-black uppercase bg-brand-orange text-brand-dark btn-shadow hover:translate-y-[2px] hover:shadow-[2px_2px_0px_var(--color-brand-steel)] transition-all w-full sm:w-auto overflow-hidden min-h-[44px]"
+                className="group relative inline-flex items-center justify-center gap-3 px-6 sm:px-8 py-3.5 sm:py-4 text-base sm:text-lg font-black uppercase bg-brand-orange text-brand-dark btn-shadow hover:translate-y-[2px] hover:shadow-[2px_2px_0px_var(--color-brand-steel)] transition-all w-full sm:w-auto overflow-hidden min-h-[44px]"
               >
                 <span className="relative z-10 flex items-center gap-2">
                   Get a Free Quote
@@ -85,7 +81,7 @@ export function Hero() {
             >
               <a
                 href="tel:5753867198"
-                className="inline-flex items-center justify-center gap-2 px-8 py-4 text-lg font-black uppercase tracking-widest bg-brand-dark text-brand-light border-2 border-brand-steel hover:bg-brand-steel/50 transition-colors w-full sm:w-auto min-h-[44px]"
+                className="inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3.5 sm:py-4 text-base sm:text-lg font-black uppercase tracking-widest bg-brand-dark text-brand-light border-2 border-brand-steel hover:bg-brand-steel/50 transition-colors w-full sm:w-auto min-h-[44px]"
               >
                 <Phone className="w-5 h-5 text-brand-orange" />
                 (575) 386-7198
@@ -94,12 +90,11 @@ export function Hero() {
           </div>
         </motion.div>
 
-        {/* Feature Highlights */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
-          className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-20 w-full max-w-5xl"
+          className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12 sm:mt-16 w-full max-w-5xl"
         >
           {[
             { title: "Big Jobs. Small Jobs.", desc: "We haul it all." },

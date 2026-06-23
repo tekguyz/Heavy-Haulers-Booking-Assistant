@@ -1,6 +1,6 @@
 {
   "name": "Heavy Haulers Booking Assistant",
-  "description": "Automates moving quote calculations, payload validation, and customer intake routing for the heavyhaulers.vercel.app deployment.",
+  "description": "Automates moving quote calculations, payload validation, and customer intake routing for deployment.",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }

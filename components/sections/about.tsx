@@ -11,28 +11,14 @@ export function About() {
           
           {/* Image Side */}
           <div className="w-full lg:w-1/2 relative">
-            <div className="relative aspect-[4/5] w-full max-w-md mx-auto overflow-hidden border-2 border-brand-steel btn-shadow">
-              <div className="absolute inset-0 bg-brand-dark/20 mix-blend-multiply z-10" />
+            <div className="relative aspect-square w-full max-w-md lg:max-w-lg mx-auto overflow-hidden border-2 border-brand-steel btn-shadow">
               <Image 
-                src="https://images.unsplash.com/photo-1516528387618-afa90b13e000?auto=format&fit=crop&w=800&h=1000&q=80" 
-                alt="Movers carrying box" 
+                src="/about-flyer.jpg" 
+                alt="Heavy Haulers Official Flyer" 
                 fill 
-                className="object-cover grayscale hover:grayscale-0 transition-all duration-700"
+                className="object-cover transition-all duration-700"
                 referrerPolicy="no-referrer"
               />
-              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-brand-dark to-transparent p-8 z-20">
-                <div className="inline-flex gap-1 mb-2">
-                  {[1, 2, 3].map((star) => (
-                    <svg key={star} className="w-5 h-5 text-brand-orange fill-current" viewBox="0 0 24 24">
-                      <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-                    </svg>
-                  ))}
-                </div>
-                <p className="text-brand-orange font-black text-xl uppercase tracking-widest">
-                  Zachary McPherson
-                </p>
-                <p className="text-brand-light font-bold uppercase tracking-widest text-xs">Owner & Operator</p>
-              </div>
             </div>
             
             {/* Decorative block */}

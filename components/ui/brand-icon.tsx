@@ -57,76 +57,130 @@ export function BrandIcon({ className = "w-10 h-10" }: BrandIconProps) {
         }}
       />
 
-      {/* The Letter "H" - Left Pillar */}
-      <motion.rect
-        x="30"
-        y="30"
-        width="12"
-        height="40"
-        fill="currentColor"
+      {/* The Double "HH" letters with dynamic skew */}
+      <motion.g
+        transform="skewX(-12) translate(4, 0)"
         variants={{
-          hidden: { opacity: 0, y: 20 },
-          visible: { opacity: 1, y: 0, transition: { duration: 0.5, delay: 0.3 } }
+          hidden: { opacity: 0, scale: 0.9 },
+          visible: { opacity: 1, scale: 1, transition: { duration: 0.6, delay: 0.2 } }
         }}
-      />
+      >
+        {/* First "H" - Left Pillar */}
+        <motion.rect
+          x="20"
+          y="32"
+          width="8"
+          height="36"
+          rx="1"
+          fill="var(--color-brand-light)"
+          variants={{
+            hidden: { opacity: 0, y: 15 },
+            visible: { opacity: 1, y: 0, transition: { duration: 0.4, delay: 0.3 } }
+          }}
+        />
+        
+        {/* First "H" - Right Pillar */}
+        <motion.rect
+          x="34"
+          y="32"
+          width="8"
+          height="36"
+          rx="1"
+          fill="var(--color-brand-light)"
+          variants={{
+            hidden: { opacity: 0, y: 15 },
+            visible: { opacity: 1, y: 0, transition: { duration: 0.4, delay: 0.4 } }
+          }}
+        />
+        
+        {/* First "H" - Crossbar */}
+        <motion.rect
+          x="28"
+          y="46"
+          width="6"
+          height="8"
+          fill="var(--color-brand-light)"
+          variants={{
+            hidden: { opacity: 0, scaleX: 0 },
+            visible: { opacity: 1, scaleX: 1, transition: { duration: 0.4, delay: 0.5 } }
+          }}
+        />
+
+        {/* Second "H" - Left Pillar */}
+        <motion.rect
+          x="50"
+          y="32"
+          width="8"
+          height="36"
+          rx="1"
+          fill="var(--color-brand-orange)"
+          variants={{
+            hidden: { opacity: 0, y: 15 },
+            visible: { opacity: 1, y: 0, transition: { duration: 0.4, delay: 0.5 } }
+          }}
+        />
+        
+        {/* Second "H" - Right Pillar */}
+        <motion.rect
+          x="64"
+          y="32"
+          width="8"
+          height="36"
+          rx="1"
+          fill="var(--color-brand-orange)"
+          variants={{
+            hidden: { opacity: 0, y: 15 },
+            visible: { opacity: 1, y: 0, transition: { duration: 0.4, delay: 0.6 } }
+          }}
+        />
+        
+        {/* Second "H" - Crossbar */}
+        <motion.rect
+          x="58"
+          y="46"
+          width="6"
+          height="8"
+          fill="var(--color-brand-orange)"
+          variants={{
+            hidden: { opacity: 0, scaleX: 0 },
+            visible: { opacity: 1, scaleX: 1, transition: { duration: 0.4, delay: 0.7 } }
+          }}
+        />
+      </motion.g>
       
-      {/* The Letter "H" - Right Pillar */}
-      <motion.rect
-        x="58"
-        y="30"
-        width="12"
-        height="40"
-        fill="currentColor"
-        variants={{
-          hidden: { opacity: 0, y: 20 },
-          visible: { opacity: 1, y: 0, transition: { duration: 0.5, delay: 0.4 } }
-        }}
-      />
-      
-      {/* The Letter "H" - Crossbar with Arrow Cutout */}
-      <motion.path
-        d="M 42 44 H 58 V 56 H 42 Z"
-        fill="currentColor"
-        variants={{
-          hidden: { opacity: 0, scaleX: 0 },
-          visible: { opacity: 1, scaleX: 1, transition: { duration: 0.5, delay: 0.5 } }
-        }}
-      />
-      
-      {/* Forward Action Arrow overlaying the H */}
-      <motion.path
-        d="M 45 50 L 53 42 V 48 L 65 48 V 52 L 53 52 V 58 Z"
-        fill="var(--color-brand-orange)"
-        variants={{
-          hidden: { opacity: 0, x: -10 },
-          visible: { opacity: 1, x: 0, transition: { duration: 0.5, delay: 0.7, type: 'spring', stiffness: 200 } }
-        }}
-        whileHover={{
-          x: 4,
-          transition: { duration: 0.2, repeat: Infinity, repeatType: "reverse" }
-        }}
-      />
-      
-      {/* Speed Lines / Truck movement indicator */}
+      {/* Dynamic Forward Speed / Movement indicator lines (matching the flyer logo) */}
       <motion.line
-        x1="15"
-        y1="50"
-        x2="25"
-        y2="50"
+        x1="8"
+        y1="42"
+        x2="18"
+        y2="42"
         stroke="var(--color-brand-orange)"
         strokeWidth="3"
         strokeLinecap="round"
         variants={{
           hidden: { opacity: 0, x: -10 },
+          visible: { opacity: 1, x: 0, transition: { duration: 0.3, delay: 0.8 } }
+        }}
+      />
+      <motion.line
+        x1="4"
+        y1="50"
+        x2="15"
+        y2="50"
+        stroke="var(--color-brand-orange)"
+        strokeWidth="3.5"
+        strokeLinecap="round"
+        variants={{
+          hidden: { opacity: 0, x: -12 },
           visible: { opacity: 1, x: 0, transition: { duration: 0.3, delay: 0.9 } }
         }}
       />
       <motion.line
-        x1="20"
-        y1="60"
-        x2="28"
-        y2="60"
-        stroke="var(--color-brand-steel)"
+        x1="8"
+        y1="58"
+        x2="18"
+        y2="58"
+        stroke="var(--color-brand-orange)"
         strokeWidth="3"
         strokeLinecap="round"
         variants={{
